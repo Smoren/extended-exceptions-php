@@ -1,7 +1,7 @@
 {
-  "name": "smoren/similar-string-finder",
-  "description": "Similar string finder",
-  "keywords": ["string", "search", "similar"],
+  "name": "smoren/extended-exceptions-php",
+  "description": "Extended exceptions",
+  "keywords": ["exception"],
   "license": "MIT",
   "authors": [
     {
@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Smoren\\SimilarStringFinder\\": "src"
+      "Smoren\\ExtendedExceptions\\": "src"
     }
   },
   "config": {

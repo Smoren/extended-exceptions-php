@@ -1,9 +1,3 @@
-# SimilarStringFinder
+# Extended Excpetions for php
 
-Поиск индекса похожей строки
-
-Пример использования:
-
-```php
-Smoren\SimilarStringFinder\SimilarStringFinderExample::test();
-```
+Класс исключения с расширенными возможностями
