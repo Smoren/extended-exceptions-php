@@ -4,5 +4,5 @@
 
 ### How to install to Yii2 project
 ```
-composer require smoren/extended-exceptions-php
+composer require smoren/extended-exceptions
 ```
