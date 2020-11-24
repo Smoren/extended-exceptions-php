@@ -1,3 +1,3 @@
-# Extended Excpetions for php
+# Extended Exceptions for php
 
 Класс исключения с расширенными возможностями
