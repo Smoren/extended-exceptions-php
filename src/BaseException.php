@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Smoren\ExtendedExceptions;
-
 
 use Exception;
 use Throwable;
@@ -14,11 +12,11 @@ use Throwable;
 class BaseException extends Exception implements ExtendedExceptionInterface
 {
     /**
-     * @var array Exception extended data
+     * @var array|null Exception extended data
      */
     protected $data;
     /**
-     * @var array Exception debug data
+     * @var array|null Exception debug data
      */
     protected $debugData;
 
@@ -44,11 +42,16 @@ class BaseException extends Exception implements ExtendedExceptionInterface
      * @param string $message
      * @param int $code
      * @param Throwable|null $previous
-     * @param array $data
-     * @param array $debugData
+     * @param array|null $data
+     * @param array|null $debugData
      */
-    public function __construct(string $message, int $code, Throwable $previous = null, array $data = [], array $debugData = [])
-    {
+    public function __construct(
+        string $message,
+        int $code,
+        Throwable $previous = null,
+        ?array $data = null,
+        ?array $debugData = null
+    ) {
         parent::__construct($message, $code, $previous);
         $this->data = $data;
         $this->debugData = $debugData;
@@ -59,7 +62,7 @@ class BaseException extends Exception implements ExtendedExceptionInterface
      */
     public function getData(): array
     {
-        return $this->data;
+        return $this->data ?? [];
     }
 
     /**
@@ -67,6 +70,6 @@ class BaseException extends Exception implements ExtendedExceptionInterface
      */
     public function getDebugData(): array
     {
-        return static::extendDebugData($this, $this->debugData);
+        return static::extendDebugData($this, $this->debugData ?? []);
     }
 }
